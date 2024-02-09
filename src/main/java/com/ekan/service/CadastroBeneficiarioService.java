@@ -7,6 +7,7 @@ import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
 
+import com.ekan.exception.DadosNaoEncontradosException;
 import com.ekan.exception.ErroPersistenciaException;
 import com.ekan.model.Beneficiario;
 import com.ekan.repository.BeneficiarioRepository;
@@ -35,7 +36,7 @@ public class CadastroBeneficiarioService {
 			beneficiarioRepository.deleteById(beneficiarioId);	
 			
 		} catch (EmptyResultDataAccessException  e) {
-			throw new ErroPersistenciaException("Beneficiário não encontrado");	
+			throw new DadosNaoEncontradosException("Beneficiário não encontrado");	
 		}	
 		
 		catch (DataIntegrityViolationException  e) {
