@@ -25,8 +25,8 @@ public class SpringFoxConfig {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("Sua API Title")
-                .description("Descrição da sua API")
+                .title("Avaliação Ekan")
+                .description("Avaliação Ekan")
                 .version("1.0.0")
                 .build();
     }
